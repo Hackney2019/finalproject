@@ -5,3 +5,7 @@ h1 {
 li {
   display: block;
 }
+
+.col-md-6 {
+  font-size: 175%;
+}
