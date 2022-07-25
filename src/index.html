@@ -14,6 +14,7 @@
     />
   </head>
   <body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <div class="container">
       <h1 id="city"></h1>
       <ul>
@@ -28,7 +29,7 @@
             src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
             alt="sunny"
           />
-          20 C &deg; | 68 F &deg;
+          <h2 id="temperature"></h2>
         </div>
       </div>
       <small>
@@ -42,7 +43,6 @@
       </small>
       <link rel="stylesheet" href="style.css" />
       <script src="app.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </div>
   </body>
 </html>
