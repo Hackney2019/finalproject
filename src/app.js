@@ -1,12 +1,16 @@
 function displayTemperature(response) {
-  console.log(response.data.main.temp);
-  let url = "https://jsonplaceholder.typicode.com/users/1";
-  axios.get(url).then(showUser);
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
 }
-
 let apiKey = "32af4edcba23e12e10d2fa362b950362";
 
 let apiUrl =
-  "http://api.openweathermap.org/data/2.5/weather?q=Grove City&APPID=32af4edcba23e12e10d2fa362b950362";
+  "http://api.openweathermap.org/data/2.5/weather?q=Grove City&APPID=32af4edcba23e12e10d2fa362b950362&units=metric";
 
-console.log(apiUrl);
+axios
+  .get(
+    "http://api.openweathermap.org/data/2.5/weather?q=Grove City&APPID=32af4edcba23e12e10d2fa362b950362&units=metric"
+  )
+  .then(displayTemperature);
