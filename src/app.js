@@ -10,6 +10,6 @@ let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=Grove City&APPID=
 
 axios
   .get(
-    "http://api.openweathermap.org/data/2.5/weather?q=Grove City&APPID=32af4edcba23e12e10d2fa362b950362&units=metric"
+    `http://api.openweathermap.org/data/2.5/weather?q=Grove City&APPID=32af4edcba23e12e10d2fa362b950362&units=metric`
   )
   .then(displayTemperature);
